@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="encryption.cpp" path="/home/yzou/CTREncryption/src/encryption.cpp"/>
+    <originFiles name="params.h" path="/home/yzou/CTREncryption/src/params.h"/>
+    <originFiles name="cache.cpp" path="/home/yzou/LRUCache/src/cache.cpp"/>
+    <originFiles name="cache.h" path="/home/yzou/LRUCache/src/cache.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>
