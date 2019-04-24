@@ -1,8 +1,0 @@
-#ifndef PARAMS_H
-#define PARAMS_H
-
-#define DATA_CACHELINE_BASE_IDX		0
-#define COUNTER_CACHELINE_BASE_IDX	1
-#define MT_CACHELINE_BASE_IDX		3
-
-#endif

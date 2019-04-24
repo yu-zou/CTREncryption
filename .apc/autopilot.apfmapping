@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
+    <originFiles name="SHA1.h" path="/home/yzou/CTREncryption/src/SHA1.h"/>
+    <originFiles name="cache.cpp" path="/home/yzou/CTREncryption/src/cache.cpp"/>
+    <originFiles name="cache.h" path="/home/yzou/CTREncryption/src/cache.h"/>
+    <originFiles name="counter_cache.cpp" path="/home/yzou/CTREncryption/src/counter_cache.cpp"/>
     <originFiles name="encryption.cpp" path="/home/yzou/CTREncryption/src/encryption.cpp"/>
-    <originFiles name="params.h" path="/home/yzou/CTREncryption/src/params.h"/>
-    <originFiles name="cache.cpp" path="/home/yzou/LRUCache/src/cache.cpp"/>
-    <originFiles name="cache.h" path="/home/yzou/LRUCache/src/cache.h"/>
+    <originFiles name="encryption.h" path="/home/yzou/CTREncryption/src/encryption.h"/>
+    <originFiles name="tree.cpp" path="/home/yzou/CTREncryption/src/tree.cpp"/>
+    <originFiles name="tree.h" path="/home/yzou/CTREncryption/src/tree.h"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="encryption_tb.cpp" path="/home/yzou/CTREncryption/src/encryption_tb.cpp"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

@@ -42,14 +42,24 @@
 			<location>/home/yzou/CTREncryption/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>source/SHA1.h</name>
+			<type>1</type>
+			<location>/home/yzou/CTREncryption/src/SHA1.h</location>
+		</link>
+		<link>
 			<name>source/cache.cpp</name>
 			<type>1</type>
-			<location>/home/yzou/LRUCache/src/cache.cpp</location>
+			<location>/home/yzou/CTREncryption/src/cache.cpp</location>
 		</link>
 		<link>
 			<name>source/cache.h</name>
 			<type>1</type>
-			<location>/home/yzou/LRUCache/src/cache.h</location>
+			<location>/home/yzou/CTREncryption/src/cache.h</location>
+		</link>
+		<link>
+			<name>source/counter_cache.cpp</name>
+			<type>1</type>
+			<location>/home/yzou/CTREncryption/src/counter_cache.cpp</location>
 		</link>
 		<link>
 			<name>source/encryption.cpp</name>
@@ -57,9 +67,24 @@
 			<location>/home/yzou/CTREncryption/src/encryption.cpp</location>
 		</link>
 		<link>
-			<name>source/params.h</name>
+			<name>source/encryption.h</name>
 			<type>1</type>
-			<location>/home/yzou/CTREncryption/src/params.h</location>
+			<location>/home/yzou/CTREncryption/src/encryption.h</location>
+		</link>
+		<link>
+			<name>source/tree.cpp</name>
+			<type>1</type>
+			<location>/home/yzou/CTREncryption/src/tree.cpp</location>
+		</link>
+		<link>
+			<name>source/tree.h</name>
+			<type>1</type>
+			<location>/home/yzou/CTREncryption/src/tree.h</location>
+		</link>
+		<link>
+			<name>testbench/encryption_tb.cpp</name>
+			<type>1</type>
+			<location>/home/yzou/CTREncryption/src/encryption_tb.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>

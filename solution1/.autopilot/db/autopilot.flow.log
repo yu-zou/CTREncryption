@@ -1,0 +1,1616 @@
+INFO-FLOW: Workspace /home/yzou/CTREncryption/solution1 opened at Tue Apr 23 18:03:41 EDT 2019
+Execute     config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.11 sec.
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_hp.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         license_isbetapart xczu7ev 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.21 sec.
+Execute   set_part xczu7ev-ffvc1156-2-e -tool vivado 
+Execute     add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute       get_default_platform 
+Execute       license_isbetapart xczu7ev 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 5 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     config_compile -blackbox  
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'CTREncryption/src/cache.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling CTREncryption/src/cache.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted CTREncryption/src/cache.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "CTREncryption/src/cache.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E CTREncryption/src/cache.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp
+Command       clang done; 1.48 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.61 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp"  -o "/home/yzou/CTREncryption/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp -o /home/yzou/CTREncryption/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.77 sec.
+INFO-FLOW: Done: GCC PP time: 3.9 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp std=gnu++98 -directive=/home/yzou/CTREncryption/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/home/yzou/CTREncryption/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.52 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp std=gnu++98 -directive=/home/yzou/CTREncryption/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/home/yzou/CTREncryption/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.51 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-dataflow-lawyer.cache.pp.0.cpp.diag.yml /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-dataflow-lawyer.cache.pp.0.cpp.out.log 2> /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-dataflow-lawyer.cache.pp.0.cpp.err.log 
+Command       ap_eval done; 0.5 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/home/yzou/CTREncryption/solution1/.autopilot/db/tidy-3.1.cache.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/yzou/CTREncryption/solution1/.autopilot/db/tidy-3.1.cache.pp.0.cpp.out.log 2> /home/yzou/CTREncryption/solution1/.autopilot/db/tidy-3.1.cache.pp.0.cpp.err.log 
+Command         ap_eval done; 0.96 sec.
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-legacy-rewriter.cache.pp.0.cpp.out.log 2> /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-legacy-rewriter.cache.pp.0.cpp.err.log 
+Command         ap_eval done; 0.66 sec.
+Command       tidy_31 done; 1.69 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 2.7 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.98 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/yzou/CTREncryption/solution1/.autopilot/db/cache.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/home/yzou/CTREncryption/solution1/.autopilot/db/cache.bc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/yzou/CTREncryption/solution1/.autopilot/db/cache.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/yzou/CTREncryption/solution1/.autopilot/db/cache.bc
+Command       clang done; 1.74 sec.
+INFO: [HLS 200-10] Analyzing design file 'CTREncryption/src/counter_cache.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling CTREncryption/src/counter_cache.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted CTREncryption/src/counter_cache.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "CTREncryption/src/counter_cache.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E CTREncryption/src/counter_cache.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp
+Command       clang done; 1.4 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.57 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp"  -o "/home/yzou/CTREncryption/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp -o /home/yzou/CTREncryption/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.71 sec.
+INFO-FLOW: Done: GCC PP time: 3.7 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp std=gnu++98 -directive=/home/yzou/CTREncryption/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/home/yzou/CTREncryption/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.52 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp std=gnu++98 -directive=/home/yzou/CTREncryption/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/home/yzou/CTREncryption/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.5 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-dataflow-lawyer.counter_cache.pp.0.cpp.diag.yml /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-dataflow-lawyer.counter_cache.pp.0.cpp.out.log 2> /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-dataflow-lawyer.counter_cache.pp.0.cpp.err.log 
+Command       ap_eval done; 0.49 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/home/yzou/CTREncryption/solution1/.autopilot/db/tidy-3.1.counter_cache.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/yzou/CTREncryption/solution1/.autopilot/db/tidy-3.1.counter_cache.pp.0.cpp.out.log 2> /home/yzou/CTREncryption/solution1/.autopilot/db/tidy-3.1.counter_cache.pp.0.cpp.err.log 
+Command         ap_eval done; 0.94 sec.
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-legacy-rewriter.counter_cache.pp.0.cpp.out.log 2> /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-legacy-rewriter.counter_cache.pp.0.cpp.err.log 
+Command         ap_eval done; 0.65 sec.
+Command       tidy_31 done; 1.65 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 2.6 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.69 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.bc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.bc
+Command       clang done; 1.76 sec.
+INFO: [HLS 200-10] Analyzing design file 'CTREncryption/src/encryption.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling CTREncryption/src/encryption.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted CTREncryption/src/encryption.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "CTREncryption/src/encryption.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E CTREncryption/src/encryption.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp
+Command       clang done; 1.38 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.65 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp"  -o "/home/yzou/CTREncryption/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp -o /home/yzou/CTREncryption/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.75 sec.
+INFO-FLOW: Done: GCC PP time: 3.8 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp std=gnu++98 -directive=/home/yzou/CTREncryption/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/home/yzou/CTREncryption/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.9 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp std=gnu++98 -directive=/home/yzou/CTREncryption/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/home/yzou/CTREncryption/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.57 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-dataflow-lawyer.encryption.pp.0.cpp.diag.yml /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-dataflow-lawyer.encryption.pp.0.cpp.out.log 2> /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-dataflow-lawyer.encryption.pp.0.cpp.err.log 
+Command       ap_eval done; 0.55 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/home/yzou/CTREncryption/solution1/.autopilot/db/tidy-3.1.encryption.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/yzou/CTREncryption/solution1/.autopilot/db/tidy-3.1.encryption.pp.0.cpp.out.log 2> /home/yzou/CTREncryption/solution1/.autopilot/db/tidy-3.1.encryption.pp.0.cpp.err.log 
+Command         ap_eval done; 1.11 sec.
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-legacy-rewriter.encryption.pp.0.cpp.out.log 2> /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-legacy-rewriter.encryption.pp.0.cpp.err.log 
+Command         ap_eval done; 0.75 sec.
+Command       tidy_31 done; 1.96 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 3.1 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.21 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/home/yzou/CTREncryption/solution1/.autopilot/db/encryption.bc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.bc
+Command       clang done; 1.81 sec.
+INFO: [HLS 200-10] Analyzing design file 'CTREncryption/src/tree.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling CTREncryption/src/tree.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted CTREncryption/src/tree.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "CTREncryption/src/tree.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E CTREncryption/src/tree.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp
+Command       clang done; 1.39 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.62 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp"  -o "/home/yzou/CTREncryption/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp -o /home/yzou/CTREncryption/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.75 sec.
+INFO-FLOW: Done: GCC PP time: 3.8 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp std=gnu++98 -directive=/home/yzou/CTREncryption/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/home/yzou/CTREncryption/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.57 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp std=gnu++98 -directive=/home/yzou/CTREncryption/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/home/yzou/CTREncryption/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.55 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-dataflow-lawyer.tree.pp.0.cpp.diag.yml /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-dataflow-lawyer.tree.pp.0.cpp.out.log 2> /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-dataflow-lawyer.tree.pp.0.cpp.err.log 
+Command       ap_eval done; 0.54 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/home/yzou/CTREncryption/solution1/.autopilot/db/tidy-3.1.tree.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/yzou/CTREncryption/solution1/.autopilot/db/tidy-3.1.tree.pp.0.cpp.out.log 2> /home/yzou/CTREncryption/solution1/.autopilot/db/tidy-3.1.tree.pp.0.cpp.err.log 
+Command         ap_eval done; 1.01 sec.
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-legacy-rewriter.tree.pp.0.cpp.out.log 2> /home/yzou/CTREncryption/solution1/.autopilot/db/xilinx-legacy-rewriter.tree.pp.0.cpp.err.log 
+Command         ap_eval done; 0.71 sec.
+Command       tidy_31 done; 1.76 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 2.9 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.1 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/yzou/CTREncryption/solution1/.autopilot/db/tree.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/home/yzou/CTREncryption/solution1/.autopilot/db/tree.bc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/yzou/CTREncryption/solution1/.autopilot/db/tree.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/yzou/CTREncryption/solution1/.autopilot/db/tree.bc
+Command       clang done; 1.8 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld /home/yzou/CTREncryption/solution1/.autopilot/db/cache.g.bc /home/yzou/CTREncryption/solution1/.autopilot/db/counter_cache.g.bc /home/yzou/CTREncryption/solution1/.autopilot/db/encryption.g.bc /home/yzou/CTREncryption/solution1/.autopilot/db/tree.g.bc -hls-opt -except-internalize block_aes_128 -L/opt/Xilinx/Vivado/2018.3/lnx64/lib -lhlsm -lhlsmc++ -o /home/yzou/CTREncryption/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 0.86 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 441.969 ; gain = 0.102 ; free physical = 12000 ; free virtual = 25845
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 441.969 ; gain = 0.102 ; free physical = 12000 ; free virtual = 25845
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /home/yzou/CTREncryption/solution1/.autopilot/db/a.pp.bc -o /home/yzou/CTREncryption/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld /home/yzou/CTREncryption/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/Xilinx/Vivado/2018.3/lnx64/lib -lfloatconversion -o /home/yzou/CTREncryption/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.82 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top block_aes_128 -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/yzou/CTREncryption/solution1/.autopilot/db/a.g.0.bc -o /home/yzou/CTREncryption/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-603] Inlining function 'xtime' into 'mix_column_block' (CTREncryption/src/encryption.cpp:130).
+INFO: [XFORM 203-603] Inlining function 'xtime' into 'mix_column_block' (CTREncryption/src/encryption.cpp:129).
+INFO: [XFORM 203-603] Inlining function 'xtime' into 'mix_column_block' (CTREncryption/src/encryption.cpp:128).
+INFO: [XFORM 203-603] Inlining function 'xtime' into 'mix_column_block' (CTREncryption/src/encryption.cpp:127).
+INFO: [XFORM 203-603] Inlining function 'mix_column_block' into 'proc_block' (CTREncryption/src/encryption.cpp:297).
+Command         transform done; 0.26 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 571.570 ; gain = 129.703 ; free physical = 11973 ; free virtual = 25822
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/yzou/CTREncryption/solution1/.autopilot/db/a.g.1.bc -o /home/yzou/CTREncryption/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.23 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/yzou/CTREncryption/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/yzou/CTREncryption/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] CTREncryption/src/encryption.cpp:282: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 571.570 ; gain = 129.703 ; free physical = 11963 ; free virtual = 25812
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/yzou/CTREncryption/solution1/.autopilot/db/a.g.1.bc to /home/yzou/CTREncryption/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /home/yzou/CTREncryption/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/yzou/CTREncryption/solution1/.autopilot/db/a.o.1.bc -o /home/yzou/CTREncryption/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_main' (CTREncryption/src/encryption.cpp:289) in function 'proc_block' for pipelining.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'shift_row_block' (CTREncryption/src/encryption.cpp:63).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'add_round_key_block' (CTREncryption/src/encryption.cpp:151).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sub_byte_block' (CTREncryption/src/encryption.cpp:22).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (CTREncryption/src/encryption.cpp:272) in function 'proc_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (CTREncryption/src/encryption.cpp:276) in function 'proc_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (CTREncryption/src/encryption.cpp:278) in function 'proc_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (CTREncryption/src/encryption.cpp:280) in function 'proc_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (CTREncryption/src/encryption.cpp:118) in function 'proc_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1' (CTREncryption/src/encryption.cpp:120) in function 'proc_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (CTREncryption/src/encryption.cpp:311) in function 'proc_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1' (CTREncryption/src/encryption.cpp:313) in function 'proc_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1' (CTREncryption/src/encryption.cpp:315) in function 'proc_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (CTREncryption/src/encryption.cpp:66) in function 'shift_row_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (CTREncryption/src/encryption.cpp:193) in function 'key_expansion' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (CTREncryption/src/encryption.cpp:154) in function 'add_round_key_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (CTREncryption/src/encryption.cpp:156) in function 'add_round_key_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (CTREncryption/src/encryption.cpp:159) in function 'add_round_key_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (CTREncryption/src/encryption.cpp:26) in function 'sub_byte_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (CTREncryption/src/encryption.cpp:28) in function 'sub_byte_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (CTREncryption/src/encryption.cpp:30) in function 'sub_byte_block' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (CTREncryption/src/encryption.cpp:154) in function 'add_round_key_block.1' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (CTREncryption/src/encryption.cpp:156) in function 'add_round_key_block.1' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (CTREncryption/src/encryption.cpp:159) in function 'add_round_key_block.1' completely with a factor of 4.
+WARNING: [XFORM 203-104] Completely partitioning array 'sbox.V'  accessed through non-constant indices on dimension 1 (CTREncryption/src/encryption.cpp:32:36), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'sbox.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'state.V' (CTREncryption/src/encryption.cpp:268) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'input.V' (CTREncryption/src/encryption.cpp:270) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState1.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState2.V' (CTREncryption/src/encryption.cpp:291) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState0.V.1' (CTREncryption/src/encryption.cpp:291) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState0.V' (CTREncryption/src/encryption.cpp:302) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState1.V.1' (CTREncryption/src/encryption.cpp:302) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'state.V' (CTREncryption/src/encryption.cpp:268) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState1.V'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState2.V' (CTREncryption/src/encryption.cpp:291) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState0.V.1' (CTREncryption/src/encryption.cpp:291) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState0.V' (CTREncryption/src/encryption.cpp:302) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState1.V.1' (CTREncryption/src/encryption.cpp:302) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'state.V' (CTREncryption/src/encryption.cpp:268) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState1.V'  in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState2.V' (CTREncryption/src/encryption.cpp:291) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState0.V.1' (CTREncryption/src/encryption.cpp:291) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState0.V' (CTREncryption/src/encryption.cpp:302) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'tempState1.V.1' (CTREncryption/src/encryption.cpp:302) in dimension 3 completely.
+INFO: [XFORM 203-101] Partitioning array 'state.V' (CTREncryption/src/encryption.cpp:268) in dimension 4 completely.
+Command         transform done; 15.08 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/yzou/CTREncryption/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/yzou/CTREncryption/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (CTREncryption/src/encryption.cpp:36:1) in function 'sub_byte_block'... converting 193 basic blocks.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block.1' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'sub_byte_block' (CTREncryption/src/encryption.cpp:32).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'key_expansion' (CTREncryption/src/encryption.cpp:195).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'key_expansion' (CTREncryption/src/encryption.cpp:195).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'key_expansion' (CTREncryption/src/encryption.cpp:195).
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i8P.i8' into 'key_expansion' (CTREncryption/src/encryption.cpp:195).
+INFO: [XFORM 203-11] Balancing expressions in function 'proc_block' (CTREncryption/src/encryption.cpp:93:22)...144 expression(s) balanced.
+Command         transform done; 3.34 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 637.867 ; gain = 196.000 ; free physical = 11886 ; free virtual = 25737
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build /home/yzou/CTREncryption/solution1/.autopilot/db/a.o.2.bc -o /home/yzou/CTREncryption/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 3.42 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 637.867 ; gain = 196.000 ; free physical = 11799 ; free virtual = 25650
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 23.26 sec.
+Command     elaborate done; 64.55 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'block_aes_128' ...
+Execute       ap_set_top_model block_aes_128 
+WARNING: [SYN 201-103] Legalizing function name 'add_round_key_block.1' to 'add_round_key_block_1'.
+WARNING: [SYN 201-103] Legalizing function name 'sub_byte_block.1' to 'sub_byte_block_1'.
+WARNING: [SYN 201-103] Legalizing function name 'add_round_key_block.189' to 'add_round_key_block_189'.
+Execute       get_model_list block_aes_128 -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model block_aes_128 
+Execute       preproc_iomode -model key_expansion 
+Execute       preproc_iomode -model proc_block 
+Execute       preproc_iomode -model add_round_key_block.189 
+Execute       preproc_iomode -model sub_byte_block.1 
+Execute       preproc_iomode -model add_round_key_block 
+Execute       preproc_iomode -model shift_row_block 
+Execute       preproc_iomode -model sub_byte_block 
+Execute       preproc_iomode -model add_round_key_block.1 
+Execute       get_model_list block_aes_128 -filter all-wo-channel 
+INFO-FLOW: Model list for configure: add_round_key_block.1 sub_byte_block shift_row_block add_round_key_block sub_byte_block.1 add_round_key_block.189 proc_block key_expansion block_aes_128
+INFO-FLOW: Configuring Module : add_round_key_block.1 ...
+Execute       set_default_model add_round_key_block.1 
+Execute       apply_spec_resource_limit add_round_key_block.1 
+INFO-FLOW: Configuring Module : sub_byte_block ...
+Execute       set_default_model sub_byte_block 
+Execute       apply_spec_resource_limit sub_byte_block 
+INFO-FLOW: Configuring Module : shift_row_block ...
+Execute       set_default_model shift_row_block 
+Execute       apply_spec_resource_limit shift_row_block 
+INFO-FLOW: Configuring Module : add_round_key_block ...
+Execute       set_default_model add_round_key_block 
+Execute       apply_spec_resource_limit add_round_key_block 
+INFO-FLOW: Configuring Module : sub_byte_block.1 ...
+Execute       set_default_model sub_byte_block.1 
+Execute       apply_spec_resource_limit sub_byte_block.1 
+INFO-FLOW: Configuring Module : add_round_key_block.189 ...
+Execute       set_default_model add_round_key_block.189 
+Execute       apply_spec_resource_limit add_round_key_block.189 
+INFO-FLOW: Configuring Module : proc_block ...
+Execute       set_default_model proc_block 
+Execute       apply_spec_resource_limit proc_block 
+INFO-FLOW: Configuring Module : key_expansion ...
+Execute       set_default_model key_expansion 
+Execute       apply_spec_resource_limit key_expansion 
+INFO-FLOW: Configuring Module : block_aes_128 ...
+Execute       set_default_model block_aes_128 
+Execute       apply_spec_resource_limit block_aes_128 
+INFO-FLOW: Model list for preprocess: add_round_key_block.1 sub_byte_block shift_row_block add_round_key_block sub_byte_block.1 add_round_key_block.189 proc_block key_expansion block_aes_128
+INFO-FLOW: Preprocessing Module: add_round_key_block.1 ...
+Execute       set_default_model add_round_key_block.1 
+Execute       cdfg_preprocess -model add_round_key_block.1 
+Execute       rtl_gen_preprocess add_round_key_block.1 
+INFO-FLOW: Preprocessing Module: sub_byte_block ...
+Execute       set_default_model sub_byte_block 
+Execute       cdfg_preprocess -model sub_byte_block 
+Execute       rtl_gen_preprocess sub_byte_block 
+INFO-FLOW: Preprocessing Module: shift_row_block ...
+Execute       set_default_model shift_row_block 
+Execute       cdfg_preprocess -model shift_row_block 
+Execute       rtl_gen_preprocess shift_row_block 
+INFO-FLOW: Preprocessing Module: add_round_key_block ...
+Execute       set_default_model add_round_key_block 
+Execute       cdfg_preprocess -model add_round_key_block 
+Execute       rtl_gen_preprocess add_round_key_block 
+INFO-FLOW: Preprocessing Module: sub_byte_block.1 ...
+Execute       set_default_model sub_byte_block.1 
+Execute       cdfg_preprocess -model sub_byte_block.1 
+Execute       rtl_gen_preprocess sub_byte_block.1 
+INFO-FLOW: Preprocessing Module: add_round_key_block.189 ...
+Execute       set_default_model add_round_key_block.189 
+Execute       cdfg_preprocess -model add_round_key_block.189 
+Execute       rtl_gen_preprocess add_round_key_block.189 
+INFO-FLOW: Preprocessing Module: proc_block ...
+Execute       set_default_model proc_block 
+Execute       cdfg_preprocess -model proc_block 
+Execute       rtl_gen_preprocess proc_block 
+INFO-FLOW: Preprocessing Module: key_expansion ...
+Execute       set_default_model key_expansion 
+Execute       cdfg_preprocess -model key_expansion 
+Execute       rtl_gen_preprocess key_expansion 
+INFO-FLOW: Preprocessing Module: block_aes_128 ...
+Execute       set_default_model block_aes_128 
+Execute       cdfg_preprocess -model block_aes_128 
+Execute       rtl_gen_preprocess block_aes_128 
+INFO-FLOW: Model list for synthesis: add_round_key_block.1 sub_byte_block shift_row_block add_round_key_block sub_byte_block.1 add_round_key_block.189 proc_block key_expansion block_aes_128
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'add_round_key_block_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model add_round_key_block.1 
+Execute       schedule -model add_round_key_block.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 65.22 seconds; current allocated memory: 241.339 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_1.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_1.sched.adb -f 
+INFO-FLOW: Finish scheduling add_round_key_block.1.
+Execute       set_default_model add_round_key_block.1 
+Execute       bind -model add_round_key_block.1 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=add_round_key_block.1
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 242.131 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_1.verbose.bind.rpt -verbose -f 
+Command       report done; 0.16 sec.
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_1.bind.adb -f 
+INFO-FLOW: Finish binding add_round_key_block.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sub_byte_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model sub_byte_block 
+Execute       schedule -model sub_byte_block 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sub_byte_block'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.19 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 243.934 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block.verbose.sched.rpt -verbose -f 
+Command       report done; 0.16 sec.
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block.sched.adb -f 
+Command       db_write done; 0.2 sec.
+INFO-FLOW: Finish scheduling sub_byte_block.
+Execute       set_default_model sub_byte_block 
+Execute       bind -model sub_byte_block 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=sub_byte_block
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.13 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.49 seconds; current allocated memory: 257.958 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block.verbose.bind.rpt -verbose -f 
+Command       report done; 0.31 sec.
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block.bind.adb -f 
+Command       db_write done; 0.2 sec.
+INFO-FLOW: Finish binding sub_byte_block.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_row_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model shift_row_block 
+Execute       schedule -model shift_row_block 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'shift_row_block'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.56 seconds; current allocated memory: 258.378 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/shift_row_block.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/shift_row_block.sched.adb -f 
+INFO-FLOW: Finish scheduling shift_row_block.
+Execute       set_default_model shift_row_block 
+Execute       bind -model shift_row_block 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=shift_row_block
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 258.837 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/shift_row_block.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/shift_row_block.bind.adb -f 
+INFO-FLOW: Finish binding shift_row_block.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'add_round_key_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model add_round_key_block 
+Execute       schedule -model add_round_key_block 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'add_round_key_block'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.28 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 260.176 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block.verbose.sched.rpt -verbose -f 
+Command       report done; 0.22 sec.
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block.sched.adb -f 
+Command       db_write done; 0.17 sec.
+INFO-FLOW: Finish scheduling add_round_key_block.
+Execute       set_default_model add_round_key_block 
+Execute       bind -model add_round_key_block 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=add_round_key_block
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.12 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.51 seconds; current allocated memory: 262.156 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block.verbose.bind.rpt -verbose -f 
+Command       report done; 0.42 sec.
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block.bind.adb -f 
+Command       db_write done; 0.17 sec.
+INFO-FLOW: Finish binding add_round_key_block.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sub_byte_block_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model sub_byte_block.1 
+Execute       schedule -model sub_byte_block.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.11 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.71 seconds; current allocated memory: 263.823 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block_1.verbose.sched.rpt -verbose -f 
+Command       report done; 0.11 sec.
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block_1.sched.adb -f 
+Command       db_write done; 0.14 sec.
+INFO-FLOW: Finish scheduling sub_byte_block.1.
+Execute       set_default_model sub_byte_block.1 
+Execute       bind -model sub_byte_block.1 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=sub_byte_block.1
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 277.334 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block_1.verbose.bind.rpt -verbose -f 
+Command       report done; 0.17 sec.
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block_1.bind.adb -f 
+Command       db_write done; 0.16 sec.
+INFO-FLOW: Finish binding sub_byte_block.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'add_round_key_block_189' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model add_round_key_block.189 
+Execute       schedule -model add_round_key_block.189 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.41 seconds; current allocated memory: 277.885 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_189.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_189.sched.adb -f 
+INFO-FLOW: Finish scheduling add_round_key_block.189.
+Execute       set_default_model add_round_key_block.189 
+Execute       bind -model add_round_key_block.189 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=add_round_key_block.189
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 278.619 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_189.verbose.bind.rpt -verbose -f 
+Command       report done; 0.15 sec.
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_189.bind.adb -f 
+INFO-FLOW: Finish binding add_round_key_block.189.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'proc_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model proc_block 
+Execute       schedule -model proc_block 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_main'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 1.26 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.5 seconds; current allocated memory: 281.581 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/proc_block.verbose.sched.rpt -verbose -f 
+Command       report done; 0.49 sec.
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/proc_block.sched.adb -f 
+Command       db_write done; 0.38 sec.
+INFO-FLOW: Finish scheduling proc_block.
+Execute       set_default_model proc_block 
+Execute       bind -model proc_block 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=proc_block
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 1.39 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.27 seconds; current allocated memory: 287.044 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/proc_block.verbose.bind.rpt -verbose -f 
+Command       report done; 1.49 sec.
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/proc_block.bind.adb -f 
+Command       db_write done; 0.4 sec.
+INFO-FLOW: Finish binding proc_block.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'key_expansion' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model key_expansion 
+Execute       schedule -model key_expansion 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.92 seconds; current allocated memory: 288.163 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/key_expansion.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/key_expansion.sched.adb -f 
+INFO-FLOW: Finish scheduling key_expansion.
+Execute       set_default_model key_expansion 
+Execute       bind -model key_expansion 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=key_expansion
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 289.378 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/key_expansion.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/key_expansion.bind.adb -f 
+INFO-FLOW: Finish binding key_expansion.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'block_aes_128' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model block_aes_128 
+Execute       schedule -model block_aes_128 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 289.450 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.sched.adb -f 
+INFO-FLOW: Finish scheduling block_aes_128.
+Execute       set_default_model block_aes_128 
+Execute       bind -model block_aes_128 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=block_aes_128
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.71 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.72 seconds; current allocated memory: 289.979 MB.
+Execute       report -o /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.verbose.bind.rpt -verbose -f 
+Command       report done; 1.04 sec.
+Execute       db_write -o /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.bind.adb -f 
+INFO-FLOW: Finish binding block_aes_128.
+Execute       get_model_list block_aes_128 -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess add_round_key_block.1 
+Execute       rtl_gen_preprocess sub_byte_block 
+Execute       rtl_gen_preprocess shift_row_block 
+Execute       rtl_gen_preprocess add_round_key_block 
+Execute       rtl_gen_preprocess sub_byte_block.1 
+Execute       rtl_gen_preprocess add_round_key_block.189 
+Execute       rtl_gen_preprocess proc_block 
+Execute       rtl_gen_preprocess key_expansion 
+Execute       rtl_gen_preprocess block_aes_128 
+INFO-FLOW: Model list for RTL generation: add_round_key_block.1 sub_byte_block shift_row_block add_round_key_block sub_byte_block.1 add_round_key_block.189 proc_block key_expansion block_aes_128
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'add_round_key_block_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model add_round_key_block.1 -vendor xilinx -mg_file /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_1.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'add_round_key_block_1'.
+Command       create_rtl_model done; 0.17 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.23 seconds; current allocated memory: 300.922 MB.
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.rtl_wrap.cfg.tcl 
+Execute       gen_rtl add_round_key_block.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/yzou/CTREncryption/solution1/syn/systemc/add_round_key_block_1 -synmodules add_round_key_block.1 sub_byte_block shift_row_block add_round_key_block sub_byte_block.1 add_round_key_block.189 proc_block key_expansion block_aes_128 
+Execute       gen_rtl add_round_key_block.1 -style xilinx -f -lang vhdl -o /home/yzou/CTREncryption/solution1/syn/vhdl/add_round_key_block_1 
+Execute       gen_rtl add_round_key_block.1 -style xilinx -f -lang vlog -o /home/yzou/CTREncryption/solution1/syn/verilog/add_round_key_block_1 
+Execute       gen_tb_info add_round_key_block.1 -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_1 -p /home/yzou/CTREncryption/solution1/.autopilot/db 
+Execute       report -model add_round_key_block.1 -o /home/yzou/CTREncryption/solution1/syn/report/add_round_key_block_1_csynth.rpt -f 
+Execute       report -model add_round_key_block.1 -o /home/yzou/CTREncryption/solution1/syn/report/add_round_key_block_1_csynth.xml -f -x 
+Execute       report -model add_round_key_block.1 -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_1.verbose.rpt -verbose -f 
+Command       report done; 0.18 sec.
+Execute       db_write -model add_round_key_block.1 -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_1.adb -f 
+Command       db_write done; 0.12 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sub_byte_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model sub_byte_block -vendor xilinx -mg_file /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'block_aes_128_mux_2568_8_1_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sub_byte_block'.
+Command       create_rtl_model done; 1.09 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.51 seconds; current allocated memory: 371.584 MB.
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.rtl_wrap.cfg.tcl 
+Execute       gen_rtl sub_byte_block -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/yzou/CTREncryption/solution1/syn/systemc/sub_byte_block -synmodules add_round_key_block.1 sub_byte_block shift_row_block add_round_key_block sub_byte_block.1 add_round_key_block.189 proc_block key_expansion block_aes_128 
+Execute       gen_rtl sub_byte_block -style xilinx -f -lang vhdl -o /home/yzou/CTREncryption/solution1/syn/vhdl/sub_byte_block 
+Execute       gen_rtl sub_byte_block -style xilinx -f -lang vlog -o /home/yzou/CTREncryption/solution1/syn/verilog/sub_byte_block 
+Execute       gen_tb_info sub_byte_block -o /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block -p /home/yzou/CTREncryption/solution1/.autopilot/db 
+Execute       report -model sub_byte_block -o /home/yzou/CTREncryption/solution1/syn/report/sub_byte_block_csynth.rpt -f 
+Execute       report -model sub_byte_block -o /home/yzou/CTREncryption/solution1/syn/report/sub_byte_block_csynth.xml -f -x 
+Execute       report -model sub_byte_block -o /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block.verbose.rpt -verbose -f 
+Command       report done; 0.37 sec.
+Execute       db_write -model sub_byte_block -o /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block.adb -f 
+Command       db_write done; 0.29 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_row_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model shift_row_block -vendor xilinx -mg_file /home/yzou/CTREncryption/solution1/.autopilot/db/shift_row_block.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_row_block'.
+Command       create_rtl_model done; 0.16 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.27 seconds; current allocated memory: 406.661 MB.
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.rtl_wrap.cfg.tcl 
+Execute       gen_rtl shift_row_block -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/yzou/CTREncryption/solution1/syn/systemc/shift_row_block -synmodules add_round_key_block.1 sub_byte_block shift_row_block add_round_key_block sub_byte_block.1 add_round_key_block.189 proc_block key_expansion block_aes_128 
+Execute       gen_rtl shift_row_block -style xilinx -f -lang vhdl -o /home/yzou/CTREncryption/solution1/syn/vhdl/shift_row_block 
+Execute       gen_rtl shift_row_block -style xilinx -f -lang vlog -o /home/yzou/CTREncryption/solution1/syn/verilog/shift_row_block 
+Execute       gen_tb_info shift_row_block -o /home/yzou/CTREncryption/solution1/.autopilot/db/shift_row_block -p /home/yzou/CTREncryption/solution1/.autopilot/db 
+Execute       report -model shift_row_block -o /home/yzou/CTREncryption/solution1/syn/report/shift_row_block_csynth.rpt -f 
+Execute       report -model shift_row_block -o /home/yzou/CTREncryption/solution1/syn/report/shift_row_block_csynth.xml -f -x 
+Execute       report -model shift_row_block -o /home/yzou/CTREncryption/solution1/.autopilot/db/shift_row_block.verbose.rpt -verbose -f 
+Execute       db_write -model shift_row_block -o /home/yzou/CTREncryption/solution1/.autopilot/db/shift_row_block.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'add_round_key_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model add_round_key_block -vendor xilinx -mg_file /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'add_round_key_block'.
+Command       create_rtl_model done; 0.82 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.98 seconds; current allocated memory: 447.236 MB.
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.rtl_wrap.cfg.tcl 
+Execute       gen_rtl add_round_key_block -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/yzou/CTREncryption/solution1/syn/systemc/add_round_key_block -synmodules add_round_key_block.1 sub_byte_block shift_row_block add_round_key_block sub_byte_block.1 add_round_key_block.189 proc_block key_expansion block_aes_128 
+Execute       gen_rtl add_round_key_block -style xilinx -f -lang vhdl -o /home/yzou/CTREncryption/solution1/syn/vhdl/add_round_key_block 
+Execute       gen_rtl add_round_key_block -style xilinx -f -lang vlog -o /home/yzou/CTREncryption/solution1/syn/verilog/add_round_key_block 
+Execute       gen_tb_info add_round_key_block -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block -p /home/yzou/CTREncryption/solution1/.autopilot/db 
+Execute       report -model add_round_key_block -o /home/yzou/CTREncryption/solution1/syn/report/add_round_key_block_csynth.rpt -f 
+Execute       report -model add_round_key_block -o /home/yzou/CTREncryption/solution1/syn/report/add_round_key_block_csynth.xml -f -x 
+Execute       report -model add_round_key_block -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block.verbose.rpt -verbose -f 
+Command       report done; 0.51 sec.
+Execute       db_write -model add_round_key_block -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block.adb -f 
+Command       db_write done; 0.36 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sub_byte_block_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model sub_byte_block.1 -vendor xilinx -mg_file /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block_1.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'block_aes_128_mux_2568_8_1_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sub_byte_block_1'.
+Command       create_rtl_model done; 1.09 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.31 seconds; current allocated memory: 528.151 MB.
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.rtl_wrap.cfg.tcl 
+Execute       gen_rtl sub_byte_block.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/yzou/CTREncryption/solution1/syn/systemc/sub_byte_block_1 -synmodules add_round_key_block.1 sub_byte_block shift_row_block add_round_key_block sub_byte_block.1 add_round_key_block.189 proc_block key_expansion block_aes_128 
+Execute       gen_rtl sub_byte_block.1 -style xilinx -f -lang vhdl -o /home/yzou/CTREncryption/solution1/syn/vhdl/sub_byte_block_1 
+Execute       gen_rtl sub_byte_block.1 -style xilinx -f -lang vlog -o /home/yzou/CTREncryption/solution1/syn/verilog/sub_byte_block_1 
+Execute       gen_tb_info sub_byte_block.1 -o /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block_1 -p /home/yzou/CTREncryption/solution1/.autopilot/db 
+Execute       report -model sub_byte_block.1 -o /home/yzou/CTREncryption/solution1/syn/report/sub_byte_block_1_csynth.rpt -f 
+Execute       report -model sub_byte_block.1 -o /home/yzou/CTREncryption/solution1/syn/report/sub_byte_block_1_csynth.xml -f -x 
+Execute       report -model sub_byte_block.1 -o /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block_1.verbose.rpt -verbose -f 
+Command       report done; 0.21 sec.
+Execute       db_write -model sub_byte_block.1 -o /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block_1.adb -f 
+Command       db_write done; 0.27 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'add_round_key_block_189' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model add_round_key_block.189 -vendor xilinx -mg_file /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_189.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'add_round_key_block_189'.
+Command       create_rtl_model done; 0.16 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.05 seconds; current allocated memory: 561.244 MB.
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.rtl_wrap.cfg.tcl 
+Execute       gen_rtl add_round_key_block.189 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/yzou/CTREncryption/solution1/syn/systemc/add_round_key_block_189 -synmodules add_round_key_block.1 sub_byte_block shift_row_block add_round_key_block sub_byte_block.1 add_round_key_block.189 proc_block key_expansion block_aes_128 
+Execute       gen_rtl add_round_key_block.189 -style xilinx -f -lang vhdl -o /home/yzou/CTREncryption/solution1/syn/vhdl/add_round_key_block_189 
+Execute       gen_rtl add_round_key_block.189 -style xilinx -f -lang vlog -o /home/yzou/CTREncryption/solution1/syn/verilog/add_round_key_block_189 
+Execute       gen_tb_info add_round_key_block.189 -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_189 -p /home/yzou/CTREncryption/solution1/.autopilot/db 
+Execute       report -model add_round_key_block.189 -o /home/yzou/CTREncryption/solution1/syn/report/add_round_key_block_189_csynth.rpt -f 
+Execute       report -model add_round_key_block.189 -o /home/yzou/CTREncryption/solution1/syn/report/add_round_key_block_189_csynth.xml -f -x 
+Execute       report -model add_round_key_block.189 -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_189.verbose.rpt -verbose -f 
+Command       report done; 0.18 sec.
+Execute       db_write -model add_round_key_block.189 -o /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_189.adb -f 
+Command       db_write done; 0.2 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'proc_block' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model proc_block -vendor xilinx -mg_file /home/yzou/CTREncryption/solution1/.autopilot/db/proc_block.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'proc_block'.
+Command       create_rtl_model done; 2.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.65 seconds; current allocated memory: 620.160 MB.
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.rtl_wrap.cfg.tcl 
+Execute       gen_rtl proc_block -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/yzou/CTREncryption/solution1/syn/systemc/proc_block -synmodules add_round_key_block.1 sub_byte_block shift_row_block add_round_key_block sub_byte_block.1 add_round_key_block.189 proc_block key_expansion block_aes_128 
+Execute       gen_rtl proc_block -style xilinx -f -lang vhdl -o /home/yzou/CTREncryption/solution1/syn/vhdl/proc_block 
+Execute       gen_rtl proc_block -style xilinx -f -lang vlog -o /home/yzou/CTREncryption/solution1/syn/verilog/proc_block 
+Execute       gen_tb_info proc_block -o /home/yzou/CTREncryption/solution1/.autopilot/db/proc_block -p /home/yzou/CTREncryption/solution1/.autopilot/db 
+Command       gen_tb_info done; 0.19 sec.
+Execute       report -model proc_block -o /home/yzou/CTREncryption/solution1/syn/report/proc_block_csynth.rpt -f 
+Command       report done; 0.19 sec.
+Execute       report -model proc_block -o /home/yzou/CTREncryption/solution1/syn/report/proc_block_csynth.xml -f -x 
+Command       report done; 0.18 sec.
+Execute       report -model proc_block -o /home/yzou/CTREncryption/solution1/.autopilot/db/proc_block.verbose.rpt -verbose -f 
+Command       report done; 1.67 sec.
+Execute       db_write -model proc_block -o /home/yzou/CTREncryption/solution1/.autopilot/db/proc_block.adb -f 
+Command       db_write done; 0.86 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'key_expansion' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model key_expansion -vendor xilinx -mg_file /home/yzou/CTREncryption/solution1/.autopilot/db/key_expansion.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'block_aes_128_mux_2568_8_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'key_expansion'.
+INFO: [HLS 200-111]  Elapsed time: 3.39 seconds; current allocated memory: 643.823 MB.
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.rtl_wrap.cfg.tcl 
+Execute       gen_rtl key_expansion -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/yzou/CTREncryption/solution1/syn/systemc/key_expansion -synmodules add_round_key_block.1 sub_byte_block shift_row_block add_round_key_block sub_byte_block.1 add_round_key_block.189 proc_block key_expansion block_aes_128 
+Execute       gen_rtl key_expansion -style xilinx -f -lang vhdl -o /home/yzou/CTREncryption/solution1/syn/vhdl/key_expansion 
+Execute       gen_rtl key_expansion -style xilinx -f -lang vlog -o /home/yzou/CTREncryption/solution1/syn/verilog/key_expansion 
+Execute       gen_tb_info key_expansion -o /home/yzou/CTREncryption/solution1/.autopilot/db/key_expansion -p /home/yzou/CTREncryption/solution1/.autopilot/db 
+Execute       report -model key_expansion -o /home/yzou/CTREncryption/solution1/syn/report/key_expansion_csynth.rpt -f 
+Execute       report -model key_expansion -o /home/yzou/CTREncryption/solution1/syn/report/key_expansion_csynth.xml -f -x 
+Execute       report -model key_expansion -o /home/yzou/CTREncryption/solution1/.autopilot/db/key_expansion.verbose.rpt -verbose -f 
+Execute       db_write -model key_expansion -o /home/yzou/CTREncryption/solution1/.autopilot/db/key_expansion.adb -f 
+Command       db_write done; 0.22 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'block_aes_128' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model block_aes_128 -vendor xilinx -mg_file /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'block_aes_128/IV_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'block_aes_128/key_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'block_aes_128/init' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'block_aes_128' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'block_aes_128'.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 646.568 MB.
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.rtl_wrap.cfg.tcl 
+Execute       gen_rtl block_aes_128 -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/yzou/CTREncryption/solution1/syn/systemc/block_aes_128 -synmodules add_round_key_block.1 sub_byte_block shift_row_block add_round_key_block sub_byte_block.1 add_round_key_block.189 proc_block key_expansion block_aes_128 
+Execute       gen_rtl block_aes_128 -istop -style xilinx -f -lang vhdl -o /home/yzou/CTREncryption/solution1/syn/vhdl/block_aes_128 
+Execute       gen_rtl block_aes_128 -istop -style xilinx -f -lang vlog -o /home/yzou/CTREncryption/solution1/syn/verilog/block_aes_128 
+Execute       export_constraint_db -o /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.constraint.tcl -f -tool general 
+Execute       report -model block_aes_128 -o /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.design.xml -verbose -f -dv 
+Command       report done; 0.79 sec.
+Execute       report -model block_aes_128 -o /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info block_aes_128 -o /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128 -p /home/yzou/CTREncryption/solution1/.autopilot/db 
+Execute       report -model block_aes_128 -o /home/yzou/CTREncryption/solution1/syn/report/block_aes_128_csynth.rpt -f 
+Execute       report -model block_aes_128 -o /home/yzou/CTREncryption/solution1/syn/report/block_aes_128_csynth.xml -f -x 
+Execute       report -model block_aes_128 -o /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.verbose.rpt -verbose -f 
+Command       report done; 1.05 sec.
+Execute       db_write -model block_aes_128 -o /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.adb -f 
+Command       db_write done; 0.2 sec.
+Execute       sc_get_clocks block_aes_128 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain block_aes_128 
+INFO-FLOW: Model list for RTL component generation: add_round_key_block.1 sub_byte_block shift_row_block add_round_key_block sub_byte_block.1 add_round_key_block.189 proc_block key_expansion block_aes_128
+INFO-FLOW: Handling components in module [add_round_key_block_1] ... 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_1.compgen.tcl 
+INFO-FLOW: Handling components in module [sub_byte_block] ... 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block.compgen.tcl 
+INFO-FLOW: Found component block_aes_128_mux_2568_8_1_1.
+INFO-FLOW: Append model block_aes_128_mux_2568_8_1_1
+INFO-FLOW: Handling components in module [shift_row_block] ... 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/shift_row_block.compgen.tcl 
+INFO-FLOW: Handling components in module [add_round_key_block] ... 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block.compgen.tcl 
+INFO-FLOW: Handling components in module [sub_byte_block_1] ... 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block_1.compgen.tcl 
+INFO-FLOW: Handling components in module [add_round_key_block_189] ... 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_189.compgen.tcl 
+INFO-FLOW: Handling components in module [proc_block] ... 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/proc_block.compgen.tcl 
+INFO-FLOW: Handling components in module [key_expansion] ... 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/key_expansion.compgen.tcl 
+INFO-FLOW: Found component key_expansion_rcon_V.
+INFO-FLOW: Append model key_expansion_rcon_V
+INFO-FLOW: Handling components in module [block_aes_128] ... 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.compgen.tcl 
+INFO-FLOW: Found component block_aes_128_sub_key_V.
+INFO-FLOW: Append model block_aes_128_sub_key_V
+INFO-FLOW: Append model add_round_key_block_1
+INFO-FLOW: Append model sub_byte_block
+INFO-FLOW: Append model shift_row_block
+INFO-FLOW: Append model add_round_key_block
+INFO-FLOW: Append model sub_byte_block_1
+INFO-FLOW: Append model add_round_key_block_189
+INFO-FLOW: Append model proc_block
+INFO-FLOW: Append model key_expansion
+INFO-FLOW: Append model block_aes_128
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: block_aes_128_mux_2568_8_1_1 key_expansion_rcon_V block_aes_128_sub_key_V add_round_key_block_1 sub_byte_block shift_row_block add_round_key_block sub_byte_block_1 add_round_key_block_189 proc_block key_expansion block_aes_128
+INFO-FLOW: To file: write model block_aes_128_mux_2568_8_1_1
+INFO-FLOW: To file: write model key_expansion_rcon_V
+INFO-FLOW: To file: write model block_aes_128_sub_key_V
+INFO-FLOW: To file: write model add_round_key_block_1
+INFO-FLOW: To file: write model sub_byte_block
+INFO-FLOW: To file: write model shift_row_block
+INFO-FLOW: To file: write model add_round_key_block
+INFO-FLOW: To file: write model sub_byte_block_1
+INFO-FLOW: To file: write model add_round_key_block_189
+INFO-FLOW: To file: write model proc_block
+INFO-FLOW: To file: write model key_expansion
+INFO-FLOW: To file: write model block_aes_128
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/yzou/CTREncryption/solution1
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=5.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_1.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/shift_row_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block_1.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_189.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/proc_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/key_expansion.compgen.tcl 
+INFO: [RTMG 210-279] Implementing memory 'key_expansion_rcon_V_rom' using distributed ROMs.
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'block_aes_128_sub_key_V_ram (RAM)' using block RAMs with power-on initialization.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/yzou/CTREncryption/solution1
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.11 sec.
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Command       ap_source done; 0.11 sec.
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=block_aes_128 xml_exists=0
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.rtl_wrap.cfg.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.rtl_wrap.cfg.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.rtl_wrap.cfg.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.tbgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_1.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/shift_row_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block_1.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_189.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/proc_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/key_expansion.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_1.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/shift_row_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block_1.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_189.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/proc_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/key_expansion.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_1.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/shift_row_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/sub_byte_block_1.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/add_round_key_block_189.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/proc_block.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/key_expansion.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.compgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.constraint.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=10
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=4
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=12 #gSsdmPorts=10
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.tbgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.tbgen.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_export -xo 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/block_aes_128.constraint.tcl 
+Execute       sc_get_clocks block_aes_128 
+Execute       source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: /home/yzou/CTREncryption/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:28 ; elapsed = 00:01:34 . Memory (MB): peak = 1149.867 ; gain = 708.000 ; free physical = 11289 ; free virtual = 25236
+INFO: [SYSC 207-301] Generating SystemC RTL for block_aes_128.
+INFO: [VHDL 208-304] Generating VHDL RTL for block_aes_128.
+INFO: [VLOG 209-307] Generating Verilog RTL for block_aes_128.
+Command     autosyn done; 28.45 sec.
+Execute     get_part 
+Execute     get_config_export -sdx_tcl 
+Command   csynth_design done; 93 sec.
+Command ap_source done; 93.29 sec.
+Execute cleanup_all 
+Command cleanup_all done; 0.33 sec.
+INFO-FLOW: Workspace /home/yzou/CTREncryption/solution1 opened at Tue Apr 23 18:08:31 EDT 2019
+Execute     config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.11 sec.
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_hp.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         license_isbetapart xczu7ev 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.24 sec.
+Execute   csim_design -quiet 
+Execute     source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /home/yzou/CTREncryption/src/encryption_tb.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/encryption_tb.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/tree.h 
+Execute     is_xip /home/yzou/CTREncryption/src/tree.h 
+Execute     is_encrypted /home/yzou/CTREncryption/src/tree.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/tree.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/encryption.h 
+Execute     is_xip /home/yzou/CTREncryption/src/encryption.h 
+Execute     is_encrypted /home/yzou/CTREncryption/src/encryption.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/encryption.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/counter_cache.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/counter_cache.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/cache.h 
+Execute     is_xip /home/yzou/CTREncryption/src/cache.h 
+Execute     is_encrypted /home/yzou/CTREncryption/src/cache.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/cache.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/SHA1.h 
+Execute     is_xip /home/yzou/CTREncryption/src/SHA1.h 
+Execute     get_default_platform 
+Execute     source run_sim.tcl 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 3.95 sec.
+Command ap_source done; 4.19 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/yzou/CTREncryption/solution1 opened at Tue Apr 23 18:10:22 EDT 2019
+Execute     config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.12 sec.
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_hp.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         license_isbetapart xczu7ev 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.22 sec.
+Execute   csim_design -quiet 
+Execute     source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /home/yzou/CTREncryption/src/encryption_tb.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/encryption_tb.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/tree.h 
+Execute     is_xip /home/yzou/CTREncryption/src/tree.h 
+Execute     is_encrypted /home/yzou/CTREncryption/src/tree.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/tree.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/encryption.h 
+Execute     is_xip /home/yzou/CTREncryption/src/encryption.h 
+Execute     is_encrypted /home/yzou/CTREncryption/src/encryption.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/encryption.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/counter_cache.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/counter_cache.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/cache.h 
+Execute     is_xip /home/yzou/CTREncryption/src/cache.h 
+Execute     is_encrypted /home/yzou/CTREncryption/src/cache.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/cache.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/SHA1.h 
+Execute     is_xip /home/yzou/CTREncryption/src/SHA1.h 
+Execute     get_default_platform 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 1.71 sec.
+Command ap_source done; error code: 1; 1.94 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/yzou/CTREncryption/solution1 opened at Tue Apr 23 18:11:17 EDT 2019
+Execute     config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.11 sec.
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Command     ap_source done; 0.11 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_hp.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /opt/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         license_isbetapart xczu7ev 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 28800} {LUT 230400}   {FF 460800}  {DSP48E 1728}  {BRAM 624}  {URAM 96}  
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.22 sec.
+Execute   csim_design -quiet 
+Execute     source /home/yzou/CTREncryption/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /home/yzou/CTREncryption/src/encryption_tb.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/encryption_tb.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/SHA1.h 
+Execute     is_xip /home/yzou/CTREncryption/src/SHA1.h 
+Execute     is_encrypted /home/yzou/CTREncryption/src/cache.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/cache.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/cache.h 
+Execute     is_xip /home/yzou/CTREncryption/src/cache.h 
+Execute     is_encrypted /home/yzou/CTREncryption/src/counter_cache.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/counter_cache.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/encryption.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/encryption.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/encryption.h 
+Execute     is_xip /home/yzou/CTREncryption/src/encryption.h 
+Execute     is_encrypted /home/yzou/CTREncryption/src/tree.cpp 
+Execute     is_xip /home/yzou/CTREncryption/src/tree.cpp 
+Execute     is_encrypted /home/yzou/CTREncryption/src/tree.h 
+Execute     is_xip /home/yzou/CTREncryption/src/tree.h 
+Execute     get_default_platform 
+Execute     source run_sim.tcl 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 1.84 sec.
+Command ap_source done; 2.07 sec.
+Execute cleanup_all 

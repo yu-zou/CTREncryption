@@ -1,0 +1,131 @@
+
+
+================================================================
+== Vivado HLS Report for 'block_aes_128'
+================================================================
+* Date:           Tue Apr 23 18:04:56 2019
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        CTREncryption
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.091|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   14|   32|   14|   32|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.57>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i512 0), !map !268"   --->   Operation 3 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128 %IV_V), !map !274"   --->   Operation 4 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128 %key_V), !map !278"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %init), !map !282"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([14 x i8]* @block_aes_128_str) nounwind"   --->   Operation 7 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%init_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %init)" [CTREncryption/src/encryption.cpp:355]   --->   Operation 8 'read' 'init_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%key_V_read = call i128 @_ssdm_op_Read.ap_auto.i128(i128 %key_V)" [CTREncryption/src/encryption.cpp:355]   --->   Operation 9 'read' 'key_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%IV_V_read = call i128 @_ssdm_op_Read.ap_auto.i128(i128 %IV_V)" [CTREncryption/src/encryption.cpp:355]   --->   Operation 10 'read' 'IV_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "br i1 %init_read, label %0, label %1" [CTREncryption/src/encryption.cpp:379]   --->   Operation 11 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (2.57ns)   --->   "%otp_V = call fastcc i512 @proc_block(i128 %IV_V_read)" [CTREncryption/src/encryption.cpp:382]   --->   Operation 12 'call' 'otp_V' <Predicate = (!init_read)> <Delay = 2.57> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 13 [2/2] (1.23ns)   --->   "call fastcc void @key_expansion(i128 %key_V_read, [11 x i128]* @sub_key_V)" [CTREncryption/src/encryption.cpp:380]   --->   Operation 13 'call' <Predicate = (init_read)> <Delay = 1.23> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 1.57>
+ST_2 : Operation 14 [1/2] (1.57ns)   --->   "%otp_V = call fastcc i512 @proc_block(i128 %IV_V_read)" [CTREncryption/src/encryption.cpp:382]   --->   Operation 14 'call' 'otp_V' <Predicate = (!init_read)> <Delay = 1.57> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "br label %2"   --->   Operation 15 'br' <Predicate = (!init_read)> <Delay = 0.00>
+ST_2 : Operation 16 [1/2] (0.00ns)   --->   "call fastcc void @key_expansion(i128 %key_V_read, [11 x i128]* @sub_key_V)" [CTREncryption/src/encryption.cpp:380]   --->   Operation 16 'call' <Predicate = (init_read)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "br label %2" [CTREncryption/src/encryption.cpp:381]   --->   Operation 17 'br' <Predicate = (init_read)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%agg_result_V_s = phi i512 [ undef, %0 ], [ %otp_V, %1 ]"   --->   Operation 18 'phi' 'agg_result_V_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "ret i512 %agg_result_V_s" [CTREncryption/src/encryption.cpp:384]   --->   Operation 19 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 2.57ns
+The critical path consists of the following:
+	wire read on port 'IV_V' (CTREncryption/src/encryption.cpp:355) [13]  (0 ns)
+	'call' operation ('otp.V', CTREncryption/src/encryption.cpp:382) to 'proc_block' [16]  (2.57 ns)
+
+ <State 2>: 1.57ns
+The critical path consists of the following:
+	'call' operation ('otp.V', CTREncryption/src/encryption.cpp:382) to 'proc_block' [16]  (1.57 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

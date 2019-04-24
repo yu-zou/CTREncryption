@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="CTREncryption" solutionName="solution1" date="2019-04-23T18:10:24.606-0400"/>
+        <logs message="@E Simulation failed." projectName="CTREncryption" solutionName="solution1" date="2019-04-23T18:10:24.598-0400"/>
+        <logs message="ERROR: Hi(447)out of bound(128) in range()&#xA;round 0:&#xA;100&#x9;98&#x9;116&#x9;99&#x9;&#xA;101&#x9;101&#x9;101&#x9;111&#x9;&#xA;97&#x9;97&#x9;115&#x9;100&#x9;&#xA;100&#x9;102&#x9;116&#x9;101&#x9;&#xA;round 1:&#xA;205&#x9;175&#x9;219&#x9;184&#x9;&#xA;38&#x9;67&#x9;38&#x9;73&#x9;&#xA;44&#x9;77&#x9;62&#x9;90&#x9;&#xA;159&#x9;249&#x9;141&#x9;232&#x9;&#xA;round 2:&#xA;244&#x9;91&#x9;128&#x9;56&#x9;&#xA;152&#x9;219&#x9;253&#x9;180&#x9;&#xA;183&#x9;250&#x9;196&#x9;158&#x9;&#xA;243&#x9;10&#x9;135&#x9;111&#x9;&#xA;round 3:&#xA;125&#x9;38&#x9;166&#x9;158&#x9;&#xA;147&#x9;72&#x9;181&#x9;1&#x9;&#xA;31&#x9;229&#x9;33&#x9;191&#x9;&#xA;244&#x9;254&#x9;121&#x9;22&#x9;&#xA;round 4:&#xA;9&#x9;47&#x9;137&#x9;23&#x9;&#xA;155&#x9;211&#x9;102&#x9;103&#x9;&#xA;88&#x9;189&#x9;156&#x9;35&#x9;&#xA;255&#x9;1&#x9;120&#x9;110&#x9;&#xA;round 5:&#xA;156&#x9;179&#x9;58&#x9;45&#x9;&#xA;189&#x9;110&#x9;8&#x9;111&#x9;&#xA;199&#x9;122&#x9;230&#x9;197&#x9;&#xA;15&#x9;14&#x9;118&#x9;24&#x9;&#xA;round 6:&#xA;20&#x9;167&#x9;157&#x9;176&#x9;&#xA;27&#x9;117&#x9;125&#x9;18&#x9;&#xA;106&#x9;16&#x9;246&#x9;51&#x9;&#xA;215&#x9;217&#x9;175&#x9;183&#x9;&#xA;round 7:&#xA;157&#x9;58&#x9;167&#x9;23&#x9;&#xA;216&#x9;173&#x9;208&#x9;194&#x9;&#xA;195&#x9;211&#x9;37&#x9;22&#x9;&#xA;48&#x9;233&#x9;70&#x9;241&#x9;&#xA;round 8:&#xA;56&#x9;2&#x9;165&#x9;178&#x9;&#xA;159&#x9;50&#x9;226&#x9;32&#x9;&#xA;98&#x9;177&#x9;148&#x9;130&#x9;&#xA;192&#x9;41&#x9;111&#x9;158&#x9;&#xA;round 9:&#xA;148&#x9;150&#x9;51&#x9;129&#x9;&#xA;140&#x9;190&#x9;92&#x9;124&#x9;&#xA;105&#x9;216&#x9;76&#x9;206&#x9;&#xA;247&#x9;222&#x9;177&#x9;47&#x9;&#xA;round 10:&#xA;178&#x9;36&#x9;23&#x9;150&#x9;&#xA;7&#x9;185&#x9;229&#x9;153&#x9;&#xA;124&#x9;164&#x9;232&#x9;38&#x9;&#xA;251&#x9;37&#x9;148&#x9;187&#x9;&#xA;round 0:&#xA;100&#x9;98&#x9;116&#x9;99&#x9;&#xA;101&#x9;101&#x9;101&#x9;111&#x9;&#xA;97&#x9;97&#x9;115&#x9;100&#x9;&#xA;100&#x9;102&#x9;116&#x9;101&#x9;&#xA;round 1:&#xA;205&#x9;175&#x9;219&#x9;184&#x9;&#xA;38&#x9;67&#x9;38&#x9;73&#x9;&#xA;44&#x9;77&#x9;62&#x9;90&#x9;&#xA;159&#x9;249&#x9;141&#x9;232&#x9;&#xA;round 2:&#xA;244&#x9;91&#x9;128&#x9;56&#x9;&#xA;152&#x9;219&#x9;253&#x9;180&#x9;&#xA;183&#x9;250&#x9;196&#x9;158&#x9;&#xA;243&#x9;10&#x9;135&#x9;111&#x9;&#xA;round 3:&#xA;125&#x9;38&#x9;166&#x9;158&#x9;&#xA;147&#x9;72&#x9;181&#x9;1&#x9;&#xA;31&#x9;229&#x9;33&#x9;191&#x9;&#xA;244&#x9;254&#x9;121&#x9;22&#x9;&#xA;round 4:&#xA;9&#x9;47&#x9;137&#x9;23&#x9;&#xA;155&#x9;211&#x9;102&#x9;103&#x9;&#xA;88&#x9;189&#x9;156&#x9;35&#x9;&#xA;255&#x9;1&#x9;120&#x9;110&#x9;&#xA;round 5:&#xA;156&#x9;179&#x9;58&#x9;45&#x9;&#xA;189&#x9;110&#x9;8&#x9;111&#x9;&#xA;199&#x9;122&#x9;230&#x9;197&#x9;&#xA;15&#x9;14&#x9;118&#x9;24&#x9;&#xA;round 6:&#xA;20&#x9;167&#x9;157&#x9;176&#x9;&#xA;27&#x9;117&#x9;125&#x9;18&#x9;&#xA;106&#x9;16&#x9;246&#x9;51&#x9;&#xA;215&#x9;217&#x9;175&#x9;183&#x9;&#xA;round 7:&#xA;157&#x9;58&#x9;167&#x9;23&#x9;&#xA;216&#x9;173&#x9;208&#x9;194&#x9;&#xA;195&#x9;211&#x9;37&#x9;22&#x9;&#xA;48&#x9;233&#x9;70&#x9;241&#x9;&#xA;round 8:&#xA;56&#x9;2&#x9;165&#x9;178&#x9;&#xA;159&#x9;50&#x9;226&#x9;32&#x9;&#xA;98&#x9;177&#x9;148&#x9;130&#x9;&#xA;192&#x9;41&#x9;111&#x9;158&#x9;&#xA;round 9:&#xA;148&#x9;150&#x9;51&#x9;129&#x9;&#xA;140&#x9;190&#x9;92&#x9;124&#x9;&#xA;105&#x9;216&#x9;76&#x9;206&#x9;&#xA;247&#x9;222&#x9;177&#x9;47&#x9;&#xA;round 10:&#xA;178&#x9;36&#x9;23&#x9;150&#x9;&#xA;7&#x9;185&#x9;229&#x9;153&#x9;&#xA;124&#x9;164&#x9;232&#x9;38&#x9;&#xA;251&#x9;37&#x9;148&#x9;187&#x9;" projectName="CTREncryption" solutionName="solution1" date="2019-04-23T18:10:24.590-0400"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'add_round_key_block.189' to 'add_round_key_block_189'." projectName="CTREncryption" solutionName="solution1" date="2019-04-23T18:04:46.522-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sub_byte_block.1' to 'sub_byte_block_1'." projectName="CTREncryption" solutionName="solution1" date="2019-04-23T18:04:46.506-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'add_round_key_block.1' to 'add_round_key_block_1'." projectName="CTREncryption" solutionName="solution1" date="2019-04-23T18:04:46.499-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-104] Completely partitioning array 'sbox.V'  accessed through non-constant indices on dimension 1 (CTREncryption/src/encryption.cpp:32:36), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." projectName="CTREncryption" solutionName="solution1" date="2019-04-23T18:04:25.527-0400" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] CTREncryption/src/encryption.cpp:282: variable-indexed range selection may cause suboptimal QoR." projectName="CTREncryption" solutionName="solution1" date="2019-04-23T18:04:24.647-0400" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,185 @@
+
+
+================================================================
+== Vivado HLS Report for 'key_expansion'
+================================================================
+* Date:           Tue Apr 23 18:04:56 2019
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        CTREncryption
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     2.555|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   31|   31|   31|   31|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |   30|   30|         3|          -|          -|    10|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond8)
+3 --> 
+	4  / true
+4 --> 
+	2  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.23>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%key_V_read = call i128 @_ssdm_op_Read.ap_auto.i128(i128 %key_V)" [CTREncryption/src/encryption.cpp:181]   --->   Operation 5 'read' 'key_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%sub_key_V_2_addr = getelementptr [11 x i128]* %sub_key_V_2, i64 0, i64 0" [CTREncryption/src/encryption.cpp:181]   --->   Operation 6 'getelementptr' 'sub_key_V_2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (1.23ns)   --->   "store i128 %key_V_read, i128* %sub_key_V_2_addr, align 16" [CTREncryption/src/encryption.cpp:185]   --->   Operation 7 'store' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 11> <RAM>
+ST_1 : Operation 8 [1/1] (0.65ns)   --->   "br label %1" [CTREncryption/src/encryption.cpp:187]   --->   Operation 8 'br' <Predicate = true> <Delay = 0.65>
+
+State 2 <SV = 1> <Delay = 2.03>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%round = phi i4 [ 0, %0 ], [ %round_2, %2 ]"   --->   Operation 9 'phi' 'round' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.72ns)   --->   "%exitcond8 = icmp eq i4 %round, -6" [CTREncryption/src/encryption.cpp:187]   --->   Operation 10 'icmp' 'exitcond8' <Predicate = true> <Delay = 0.72> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 11 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.79ns)   --->   "%round_2 = add i4 %round, 1" [CTREncryption/src/encryption.cpp:198]   --->   Operation 12 'add' 'round_2' <Predicate = true> <Delay = 0.79> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "br i1 %exitcond8, label %3, label %2" [CTREncryption/src/encryption.cpp:187]   --->   Operation 13 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%tmp = zext i4 %round to i64" [CTREncryption/src/encryption.cpp:189]   --->   Operation 14 'zext' 'tmp' <Predicate = (!exitcond8)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%sub_key_V_1_addr = getelementptr [11 x i128]* %sub_key_V_2, i64 0, i64 %tmp" [CTREncryption/src/encryption.cpp:189]   --->   Operation 15 'getelementptr' 'sub_key_V_1_addr' <Predicate = (!exitcond8)> <Delay = 0.00>
+ST_2 : Operation 16 [2/2] (1.23ns)   --->   "%p_Val2_s = load i128* %sub_key_V_1_addr, align 16" [CTREncryption/src/encryption.cpp:189]   --->   Operation 16 'load' 'p_Val2_s' <Predicate = (!exitcond8)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 11> <RAM>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_s = zext i4 %round_2 to i64" [CTREncryption/src/encryption.cpp:198]   --->   Operation 17 'zext' 'tmp_s' <Predicate = (!exitcond8)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%rcon_V_addr = getelementptr [11 x i8]* @rcon_V, i64 0, i64 %tmp_s" [CTREncryption/src/encryption.cpp:198]   --->   Operation 18 'getelementptr' 'rcon_V_addr' <Predicate = (!exitcond8)> <Delay = 0.00>
+ST_2 : Operation 19 [2/2] (1.23ns)   --->   "%rcon_V_load = load i8* %rcon_V_addr, align 1" [CTREncryption/src/encryption.cpp:198]   --->   Operation 19 'load' 'rcon_V_load' <Predicate = (!exitcond8)> <Delay = 1.23> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 11> <ROM>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "ret void" [CTREncryption/src/encryption.cpp:217]   --->   Operation 20 'ret' <Predicate = (exitcond8)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.55>
+ST_3 : Operation 21 [1/2] (1.23ns)   --->   "%p_Val2_s = load i128* %sub_key_V_1_addr, align 16" [CTREncryption/src/encryption.cpp:189]   --->   Operation 21 'load' 'p_Val2_s' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 11> <RAM>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%word_V = trunc i128 %p_Val2_s to i32" [CTREncryption/src/encryption.cpp:189]   --->   Operation 22 'trunc' 'word_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns) (grouped into LUT with out node ret_V_15_trunc)   --->   "%r_p = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %p_Val2_s, i32 24, i32 31)" [CTREncryption/src/encryption.cpp:191]   --->   Operation 23 'partselect' 'r_p' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns) (grouped into LUT with out node ret_V_15_trunc)   --->   "%merge_i = call i8 @_ssdm_op_Mux.ap_auto.256i8.i8(i8 99, i8 124, i8 119, i8 123, i8 -14, i8 107, i8 111, i8 -59, i8 48, i8 1, i8 103, i8 43, i8 -2, i8 -41, i8 -85, i8 118, i8 -54, i8 -126, i8 -55, i8 125, i8 -6, i8 89, i8 71, i8 -16, i8 -83, i8 -44, i8 -94, i8 -81, i8 -100, i8 -92, i8 114, i8 -64, i8 -73, i8 -3, i8 -109, i8 38, i8 54, i8 63, i8 -9, i8 -52, i8 52, i8 -91, i8 -27, i8 -15, i8 113, i8 -40, i8 49, i8 21, i8 4, i8 -57, i8 35, i8 -61, i8 24, i8 -106, i8 5, i8 -102, i8 7, i8 18, i8 -128, i8 -30, i8 -21, i8 39, i8 -78, i8 117, i8 9, i8 -125, i8 44, i8 26, i8 27, i8 110, i8 90, i8 -96, i8 82, i8 59, i8 -42, i8 -77, i8 41, i8 -29, i8 47, i8 -124, i8 83, i8 -47, i8 0, i8 -19, i8 32, i8 -4, i8 -79, i8 91, i8 106, i8 -53, i8 -66, i8 57, i8 74, i8 76, i8 88, i8 -49, i8 -48, i8 -17, i8 -86, i8 -5, i8 67, i8 77, i8 51, i8 -123, i8 69, i8 -7, i8 2, i8 127, i8 80, i8 60, i8 -97, i8 -88, i8 81, i8 -93, i8 64, i8 -113, i8 -110, i8 -99, i8 56, i8 -11, i8 -68, i8 -74, i8 -38, i8 33, i8 16, i8 -1, i8 -13, i8 -46, i8 -51, i8 12, i8 19, i8 -20, i8 95, i8 -105, i8 68, i8 23, i8 -60, i8 -89, i8 126, i8 61, i8 100, i8 93, i8 25, i8 115, i8 96, i8 -127, i8 79, i8 -36, i8 34, i8 42, i8 -112, i8 -120, i8 70, i8 -18, i8 -72, i8 20, i8 -34, i8 94, i8 11, i8 -37, i8 -32, i8 50, i8 58, i8 10, i8 73, i8 6, i8 36, i8 92, i8 -62, i8 -45, i8 -84, i8 98, i8 -111, i8 -107, i8 -28, i8 121, i8 -25, i8 -56, i8 55, i8 109, i8 -115, i8 -43, i8 78, i8 -87, i8 108, i8 86, i8 -12, i8 -22, i8 101, i8 122, i8 -82, i8 8, i8 -70, i8 120, i8 37, i8 46, i8 28, i8 -90, i8 -76, i8 -58, i8 -24, i8 -35, i8 116, i8 31, i8 75, i8 -67, i8 -117, i8 -118, i8 112, i8 62, i8 -75, i8 102, i8 72, i8 3, i8 -10, i8 14, i8 97, i8 53, i8 87, i8 -71, i8 -122, i8 -63, i8 29, i8 -98, i8 -31, i8 -8, i8 -104, i8 17, i8 105, i8 -39, i8 -114, i8 -108, i8 -101, i8 30, i8 -121, i8 -23, i8 -50, i8 85, i8 40, i8 -33, i8 -116, i8 -95, i8 -119, i8 13, i8 -65, i8 -26, i8 66, i8 104, i8 65, i8 -103, i8 45, i8 15, i8 -80, i8 84, i8 -69, i8 22, i8 %r_p)" [CTREncryption/src/encryption.cpp:191]   --->   Operation 24 'mux' 'merge_i' <Predicate = true> <Delay = 0.00> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 25 [1/1] (0.00ns) (grouped into LUT with out node ret_V_15_trunc)   --->   "%tmp_136 = trunc i128 %p_Val2_s to i8" [CTREncryption/src/encryption.cpp:195]   --->   Operation 25 'trunc' 'tmp_136' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns) (grouped into LUT with out node ret_V_15_trunc)   --->   "%merge_i1 = call i8 @_ssdm_op_Mux.ap_auto.256i8.i8(i8 99, i8 124, i8 119, i8 123, i8 -14, i8 107, i8 111, i8 -59, i8 48, i8 1, i8 103, i8 43, i8 -2, i8 -41, i8 -85, i8 118, i8 -54, i8 -126, i8 -55, i8 125, i8 -6, i8 89, i8 71, i8 -16, i8 -83, i8 -44, i8 -94, i8 -81, i8 -100, i8 -92, i8 114, i8 -64, i8 -73, i8 -3, i8 -109, i8 38, i8 54, i8 63, i8 -9, i8 -52, i8 52, i8 -91, i8 -27, i8 -15, i8 113, i8 -40, i8 49, i8 21, i8 4, i8 -57, i8 35, i8 -61, i8 24, i8 -106, i8 5, i8 -102, i8 7, i8 18, i8 -128, i8 -30, i8 -21, i8 39, i8 -78, i8 117, i8 9, i8 -125, i8 44, i8 26, i8 27, i8 110, i8 90, i8 -96, i8 82, i8 59, i8 -42, i8 -77, i8 41, i8 -29, i8 47, i8 -124, i8 83, i8 -47, i8 0, i8 -19, i8 32, i8 -4, i8 -79, i8 91, i8 106, i8 -53, i8 -66, i8 57, i8 74, i8 76, i8 88, i8 -49, i8 -48, i8 -17, i8 -86, i8 -5, i8 67, i8 77, i8 51, i8 -123, i8 69, i8 -7, i8 2, i8 127, i8 80, i8 60, i8 -97, i8 -88, i8 81, i8 -93, i8 64, i8 -113, i8 -110, i8 -99, i8 56, i8 -11, i8 -68, i8 -74, i8 -38, i8 33, i8 16, i8 -1, i8 -13, i8 -46, i8 -51, i8 12, i8 19, i8 -20, i8 95, i8 -105, i8 68, i8 23, i8 -60, i8 -89, i8 126, i8 61, i8 100, i8 93, i8 25, i8 115, i8 96, i8 -127, i8 79, i8 -36, i8 34, i8 42, i8 -112, i8 -120, i8 70, i8 -18, i8 -72, i8 20, i8 -34, i8 94, i8 11, i8 -37, i8 -32, i8 50, i8 58, i8 10, i8 73, i8 6, i8 36, i8 92, i8 -62, i8 -45, i8 -84, i8 98, i8 -111, i8 -107, i8 -28, i8 121, i8 -25, i8 -56, i8 55, i8 109, i8 -115, i8 -43, i8 78, i8 -87, i8 108, i8 86, i8 -12, i8 -22, i8 101, i8 122, i8 -82, i8 8, i8 -70, i8 120, i8 37, i8 46, i8 28, i8 -90, i8 -76, i8 -58, i8 -24, i8 -35, i8 116, i8 31, i8 75, i8 -67, i8 -117, i8 -118, i8 112, i8 62, i8 -75, i8 102, i8 72, i8 3, i8 -10, i8 14, i8 97, i8 53, i8 87, i8 -71, i8 -122, i8 -63, i8 29, i8 -98, i8 -31, i8 -8, i8 -104, i8 17, i8 105, i8 -39, i8 -114, i8 -108, i8 -101, i8 30, i8 -121, i8 -23, i8 -50, i8 85, i8 40, i8 -33, i8 -116, i8 -95, i8 -119, i8 13, i8 -65, i8 -26, i8 66, i8 104, i8 65, i8 -103, i8 45, i8 15, i8 -80, i8 84, i8 -69, i8 22, i8 %tmp_136)" [CTREncryption/src/encryption.cpp:195]   --->   Operation 26 'mux' 'merge_i1' <Predicate = true> <Delay = 0.00> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 27 [1/1] (0.00ns) (grouped into LUT with out node ret_V_15_trunc)   --->   "%p_Result_2_2 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %p_Val2_s, i32 8, i32 15)" [CTREncryption/src/encryption.cpp:195]   --->   Operation 27 'partselect' 'p_Result_2_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns) (grouped into LUT with out node ret_V_15_trunc)   --->   "%merge_i2 = call i8 @_ssdm_op_Mux.ap_auto.256i8.i8(i8 99, i8 124, i8 119, i8 123, i8 -14, i8 107, i8 111, i8 -59, i8 48, i8 1, i8 103, i8 43, i8 -2, i8 -41, i8 -85, i8 118, i8 -54, i8 -126, i8 -55, i8 125, i8 -6, i8 89, i8 71, i8 -16, i8 -83, i8 -44, i8 -94, i8 -81, i8 -100, i8 -92, i8 114, i8 -64, i8 -73, i8 -3, i8 -109, i8 38, i8 54, i8 63, i8 -9, i8 -52, i8 52, i8 -91, i8 -27, i8 -15, i8 113, i8 -40, i8 49, i8 21, i8 4, i8 -57, i8 35, i8 -61, i8 24, i8 -106, i8 5, i8 -102, i8 7, i8 18, i8 -128, i8 -30, i8 -21, i8 39, i8 -78, i8 117, i8 9, i8 -125, i8 44, i8 26, i8 27, i8 110, i8 90, i8 -96, i8 82, i8 59, i8 -42, i8 -77, i8 41, i8 -29, i8 47, i8 -124, i8 83, i8 -47, i8 0, i8 -19, i8 32, i8 -4, i8 -79, i8 91, i8 106, i8 -53, i8 -66, i8 57, i8 74, i8 76, i8 88, i8 -49, i8 -48, i8 -17, i8 -86, i8 -5, i8 67, i8 77, i8 51, i8 -123, i8 69, i8 -7, i8 2, i8 127, i8 80, i8 60, i8 -97, i8 -88, i8 81, i8 -93, i8 64, i8 -113, i8 -110, i8 -99, i8 56, i8 -11, i8 -68, i8 -74, i8 -38, i8 33, i8 16, i8 -1, i8 -13, i8 -46, i8 -51, i8 12, i8 19, i8 -20, i8 95, i8 -105, i8 68, i8 23, i8 -60, i8 -89, i8 126, i8 61, i8 100, i8 93, i8 25, i8 115, i8 96, i8 -127, i8 79, i8 -36, i8 34, i8 42, i8 -112, i8 -120, i8 70, i8 -18, i8 -72, i8 20, i8 -34, i8 94, i8 11, i8 -37, i8 -32, i8 50, i8 58, i8 10, i8 73, i8 6, i8 36, i8 92, i8 -62, i8 -45, i8 -84, i8 98, i8 -111, i8 -107, i8 -28, i8 121, i8 -25, i8 -56, i8 55, i8 109, i8 -115, i8 -43, i8 78, i8 -87, i8 108, i8 86, i8 -12, i8 -22, i8 101, i8 122, i8 -82, i8 8, i8 -70, i8 120, i8 37, i8 46, i8 28, i8 -90, i8 -76, i8 -58, i8 -24, i8 -35, i8 116, i8 31, i8 75, i8 -67, i8 -117, i8 -118, i8 112, i8 62, i8 -75, i8 102, i8 72, i8 3, i8 -10, i8 14, i8 97, i8 53, i8 87, i8 -71, i8 -122, i8 -63, i8 29, i8 -98, i8 -31, i8 -8, i8 -104, i8 17, i8 105, i8 -39, i8 -114, i8 -108, i8 -101, i8 30, i8 -121, i8 -23, i8 -50, i8 85, i8 40, i8 -33, i8 -116, i8 -95, i8 -119, i8 13, i8 -65, i8 -26, i8 66, i8 104, i8 65, i8 -103, i8 45, i8 15, i8 -80, i8 84, i8 -69, i8 22, i8 %p_Result_2_2)" [CTREncryption/src/encryption.cpp:195]   --->   Operation 28 'mux' 'merge_i2' <Predicate = true> <Delay = 0.00> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node ret_V_15_trunc)   --->   "%p_Result_2_3 = call i8 @_ssdm_op_PartSelect.i8.i128.i32.i32(i128 %p_Val2_s, i32 16, i32 23)" [CTREncryption/src/encryption.cpp:195]   --->   Operation 29 'partselect' 'p_Result_2_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns) (grouped into LUT with out node ret_V_15_trunc)   --->   "%merge_i3 = call i8 @_ssdm_op_Mux.ap_auto.256i8.i8(i8 99, i8 124, i8 119, i8 123, i8 -14, i8 107, i8 111, i8 -59, i8 48, i8 1, i8 103, i8 43, i8 -2, i8 -41, i8 -85, i8 118, i8 -54, i8 -126, i8 -55, i8 125, i8 -6, i8 89, i8 71, i8 -16, i8 -83, i8 -44, i8 -94, i8 -81, i8 -100, i8 -92, i8 114, i8 -64, i8 -73, i8 -3, i8 -109, i8 38, i8 54, i8 63, i8 -9, i8 -52, i8 52, i8 -91, i8 -27, i8 -15, i8 113, i8 -40, i8 49, i8 21, i8 4, i8 -57, i8 35, i8 -61, i8 24, i8 -106, i8 5, i8 -102, i8 7, i8 18, i8 -128, i8 -30, i8 -21, i8 39, i8 -78, i8 117, i8 9, i8 -125, i8 44, i8 26, i8 27, i8 110, i8 90, i8 -96, i8 82, i8 59, i8 -42, i8 -77, i8 41, i8 -29, i8 47, i8 -124, i8 83, i8 -47, i8 0, i8 -19, i8 32, i8 -4, i8 -79, i8 91, i8 106, i8 -53, i8 -66, i8 57, i8 74, i8 76, i8 88, i8 -49, i8 -48, i8 -17, i8 -86, i8 -5, i8 67, i8 77, i8 51, i8 -123, i8 69, i8 -7, i8 2, i8 127, i8 80, i8 60, i8 -97, i8 -88, i8 81, i8 -93, i8 64, i8 -113, i8 -110, i8 -99, i8 56, i8 -11, i8 -68, i8 -74, i8 -38, i8 33, i8 16, i8 -1, i8 -13, i8 -46, i8 -51, i8 12, i8 19, i8 -20, i8 95, i8 -105, i8 68, i8 23, i8 -60, i8 -89, i8 126, i8 61, i8 100, i8 93, i8 25, i8 115, i8 96, i8 -127, i8 79, i8 -36, i8 34, i8 42, i8 -112, i8 -120, i8 70, i8 -18, i8 -72, i8 20, i8 -34, i8 94, i8 11, i8 -37, i8 -32, i8 50, i8 58, i8 10, i8 73, i8 6, i8 36, i8 92, i8 -62, i8 -45, i8 -84, i8 98, i8 -111, i8 -107, i8 -28, i8 121, i8 -25, i8 -56, i8 55, i8 109, i8 -115, i8 -43, i8 78, i8 -87, i8 108, i8 86, i8 -12, i8 -22, i8 101, i8 122, i8 -82, i8 8, i8 -70, i8 120, i8 37, i8 46, i8 28, i8 -90, i8 -76, i8 -58, i8 -24, i8 -35, i8 116, i8 31, i8 75, i8 -67, i8 -117, i8 -118, i8 112, i8 62, i8 -75, i8 102, i8 72, i8 3, i8 -10, i8 14, i8 97, i8 53, i8 87, i8 -71, i8 -122, i8 -63, i8 29, i8 -98, i8 -31, i8 -8, i8 -104, i8 17, i8 105, i8 -39, i8 -114, i8 -108, i8 -101, i8 30, i8 -121, i8 -23, i8 -50, i8 85, i8 40, i8 -33, i8 -116, i8 -95, i8 -119, i8 13, i8 -65, i8 -26, i8 66, i8 104, i8 65, i8 -103, i8 45, i8 15, i8 -80, i8 84, i8 -69, i8 22, i8 %p_Result_2_3)" [CTREncryption/src/encryption.cpp:195]   --->   Operation 30 'mux' 'merge_i3' <Predicate = true> <Delay = 0.00> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 31 [1/2] (1.23ns)   --->   "%rcon_V_load = load i8* %rcon_V_addr, align 1" [CTREncryption/src/encryption.cpp:198]   --->   Operation 31 'load' 'rcon_V_load' <Predicate = true> <Delay = 1.23> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 11> <ROM>
+ST_3 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node ret_V_15_trunc)   --->   "%ret_V_trunc = xor i8 %rcon_V_load, %merge_i3" [CTREncryption/src/encryption.cpp:198]   --->   Operation 32 'xor' 'ret_V_trunc' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node ret_V_15_trunc)   --->   "%p_Result_4 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %ret_V_trunc, i8 %merge_i2, i8 %merge_i1, i8 %merge_i)" [CTREncryption/src/encryption.cpp:198]   --->   Operation 33 'bitconcatenate' 'p_Result_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node ret_V_15_trunc)   --->   "%p_Result_s = call i32 @_ssdm_op_PartSelect.i32.i128.i32.i32(i128 %p_Val2_s, i32 96, i32 127)" [CTREncryption/src/encryption.cpp:199]   --->   Operation 34 'partselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (1.31ns) (out node of the LUT)   --->   "%ret_V_15_trunc = xor i32 %p_Result_s, %p_Result_4" [CTREncryption/src/encryption.cpp:199]   --->   Operation 35 'xor' 'ret_V_15_trunc' <Predicate = true> <Delay = 1.31> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%p_Result_1 = call i32 @_ssdm_op_PartSelect.i32.i128.i32.i32(i128 %p_Val2_s, i32 64, i32 95)" [CTREncryption/src/encryption.cpp:201]   --->   Operation 36 'partselect' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%p_Result_3 = call i32 @_ssdm_op_PartSelect.i32.i128.i32.i32(i128 %p_Val2_s, i32 32, i32 63)" [CTREncryption/src/encryption.cpp:202]   --->   Operation 37 'partselect' 'p_Result_3' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 2.29>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%sub_key_V_1_addr_1 = getelementptr [11 x i128]* %sub_key_V_2, i64 0, i64 %tmp_s" [CTREncryption/src/encryption.cpp:199]   --->   Operation 38 'getelementptr' 'sub_key_V_1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (0.35ns)   --->   "%ret_V_16_trunc = xor i32 %p_Result_1, %ret_V_15_trunc" [CTREncryption/src/encryption.cpp:201]   --->   Operation 39 'xor' 'ret_V_16_trunc' <Predicate = true> <Delay = 0.35> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 40 [1/1] (0.35ns)   --->   "%ret_V_17_trunc = xor i32 %p_Result_3, %ret_V_16_trunc" [CTREncryption/src/encryption.cpp:202]   --->   Operation 40 'xor' 'ret_V_17_trunc' <Predicate = true> <Delay = 0.35> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 41 [1/1] (0.35ns)   --->   "%ret_V_18_trunc = xor i32 %ret_V_17_trunc, %word_V" [CTREncryption/src/encryption.cpp:202]   --->   Operation 41 'xor' 'ret_V_18_trunc' <Predicate = true> <Delay = 0.35> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%p_Result_s_5 = call i128 @_ssdm_op_BitConcatenate.i128.i32.i32.i32.i32(i32 %ret_V_15_trunc, i32 %ret_V_16_trunc, i32 %ret_V_17_trunc, i32 %ret_V_18_trunc)" [CTREncryption/src/encryption.cpp:203]   --->   Operation 42 'bitconcatenate' 'p_Result_s_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 43 [1/1] (1.23ns)   --->   "store i128 %p_Result_s_5, i128* %sub_key_V_1_addr_1, align 16" [CTREncryption/src/encryption.cpp:203]   --->   Operation 43 'store' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 11> <RAM>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "br label %1" [CTREncryption/src/encryption.cpp:187]   --->   Operation 44 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 1.24ns
+The critical path consists of the following:
+	wire read on port 'key_V' (CTREncryption/src/encryption.cpp:181) [4]  (0 ns)
+	'store' operation (CTREncryption/src/encryption.cpp:185) of variable 'op2.V', CTREncryption/src/encryption.cpp:181 on array 'sub_key_V_2' [6]  (1.24 ns)
+
+ <State 2>: 2.03ns
+The critical path consists of the following:
+	'phi' operation ('round') with incoming values : ('round', CTREncryption/src/encryption.cpp:198) [9]  (0 ns)
+	'add' operation ('round', CTREncryption/src/encryption.cpp:198) [12]  (0.797 ns)
+	'getelementptr' operation ('rcon_V_addr', CTREncryption/src/encryption.cpp:198) [28]  (0 ns)
+	'load' operation ('rcon_V_load', CTREncryption/src/encryption.cpp:198) on array 'rcon_V' [29]  (1.24 ns)
+
+ <State 3>: 2.56ns
+The critical path consists of the following:
+	'load' operation ('__Val2__', CTREncryption/src/encryption.cpp:189) on array 'sub_key_V_2' [17]  (1.24 ns)
+	'xor' operation ('ret_V_15_trunc', CTREncryption/src/encryption.cpp:199) [34]  (1.32 ns)
+
+ <State 4>: 2.29ns
+The critical path consists of the following:
+	'xor' operation ('ret_V_16_trunc', CTREncryption/src/encryption.cpp:201) [36]  (0.351 ns)
+	'xor' operation ('ret_V_17_trunc', CTREncryption/src/encryption.cpp:202) [38]  (0.351 ns)
+	'xor' operation ('ret_V_18_trunc', CTREncryption/src/encryption.cpp:202) [39]  (0.351 ns)
+	'store' operation (CTREncryption/src/encryption.cpp:203) of variable '__Result__', CTREncryption/src/encryption.cpp:203 on array 'sub_key_V_2' [41]  (1.24 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
